@@ -1,0 +1,63 @@
+---
+title: "Kerala CoronaSafe Analytics"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Kerala Covid Analytics
+
+In this document, we present the Covid 19 analysis in the state of Kerala, India. The data is collected across the 14 districts and the reproduction rate and growth rate of the epidemic have calculated for the state of Kerala.
+
+```{r, include=FALSE, results='hide', message=FALSE, warning=FALSE}
+  source ('./Scripts/Rt.R', local = knitr::knit_global())
+
+```
+
+## Kerala State Map
+
+```{r kerala_map, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+  Plot.Kerala.Map()
+```
+
+## Reproduction Rate Rt plots
+
+### Covid Cases Trend per District:
+
+```{r Covid_Cases_Trend, echo=FALSE, message=FALSE, warning=FALSE}
+  districts <- c('Thiruvananthapuram',
+                 'Kollam')
+  Plot.Original.Smoothed.Cases.Trend(districts)
+  
+  districts <- c('Pathanamthitta',
+                 'Alappuzha')
+  Plot.Original.Smoothed.Cases.Trend(districts)
+  
+  districts <- c('Kottayam',
+                 'Idukki')
+  Plot.Original.Smoothed.Cases.Trend(districts)
+  
+  districts <- c('Ernakulam',
+                 'Thrissur')
+  Plot.Original.Smoothed.Cases.Trend(districts)
+  
+  districts <- c('Palakkad',
+                 'Malappuram')
+  Plot.Original.Smoothed.Cases.Trend(districts)
+  
+  districts <- c('Kozhikode',
+                 'Wayanad')
+  Plot.Original.Smoothed.Cases.Trend(districts)
+  
+  districts <- c('Kannur',
+                 'Kasaragod')
+  Plot.Original.Smoothed.Cases.Trend(districts)
+```
+
+### Covid Rt Trend In Ernakulam:
+
+```{r Covid_Rt_Trend, echo=FALSE, message=FALSE, warning=FALSE}
+  Plot.Rt.Trend()
+```
