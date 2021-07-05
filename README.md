@@ -34,10 +34,10 @@ We can use this expression for λ and reformulate the likelihood function in ter
 
 L(R<sub>t</sub>|k) = λ<sup>k</sup> * e <sup>−λ</sup> / k!
 
-# Dataset
+## Dataset
 For this project, we use the data from https://keralastats.coronasafe.live/histories.json page where daily counts of new COVID-19 cases are reported for every district in the state of Kerala. The data is then cleaned and wrangled in a proper dataframe containing the daily count of each district. We select Ernakulam to compute the district's effective reproduction rate of the COVID-19 pandemic, R<sub>t</sub>. Every district's R<sub>t</sub> can be computed at users' choice by modifying the vector districts in the Analytics markdown file.
 
-# Computation Steps
+## Computation Steps
 
 The process to compute Rt can be briefly described as follows:
 
@@ -49,6 +49,7 @@ The process to compute Rt can be briefly described as follows:
 6. Compute the posterior P(R<sub>t</sub>|k<sub>t</sub>)
 7. Compute the estimate of R<sub>t</sub>, including the most-likely, the max, and the min values of R<sub>t</sub>
 8. Add Lockdown data to understand its impact
+9. Compute the Growth rate of the covid-19 cases 
 
 
 # References

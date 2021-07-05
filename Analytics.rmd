@@ -61,3 +61,9 @@ In this document, we present the Covid 19 analysis in the state of Kerala, India
 ```{r Covid_Rt_Trend, echo=FALSE, message=FALSE, warning=FALSE}
   Plot.Rt.Trend()
 ```
+
+### Covid Growth Trend In Ernakulam:
+
+```{r Covid_Gt_Trend, echo=FALSE, message=FALSE, warning=FALSE}
+  Plot.GrowthRate.Trend()
+```

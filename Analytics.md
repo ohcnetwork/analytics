@@ -21,3 +21,7 @@ the state of Kerala.
 ### Covid Rt Trend In Ernakulam:
 
 ![](Analytics_files/figure-gfm/Covid_Rt_Trend-1.png)<!-- -->
+
+### Covid Growth Trend In Ernakulam:
+
+![](Analytics_files/figure-gfm/Covid_Gt_Trend-1.png)<!-- -->
