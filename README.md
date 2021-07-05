@@ -1,1 +1,5 @@
-# analytics
+What is the reproduction rate of a pandemic, R<sub>t</sub> ?
+
+The effective reproduction rate of a pandemic, R<sub>0</sub>, is defined as is the average number of secondary cases per infectious case in a population made up of both susceptible and non-susceptible hosts. However, in COVID-19 pandemic, a static R0 does not adequately reflect the reality in time and space due to changes in social behaviors and restrictions. 
+
+Computation of Rt for COVID-19 enables understanding how effectively a local or state government handles the pandemic and gives the authority helpful information in decision to loosen and tighten measures of social restrictions. As the pandemic spreads with great acceleration, R<sub>t</sub> is much more larger than 1. On the contrary, when the pandemic slows down and dies out, Rt is smaller than 1 and approaches 0. This project focuses on computation of Rt for every state on the Kerala based on the number of new cases k reported daily by the state's Department of Health. The value of R<sub>t</sub> is related to that of a day before R<sub>t-1</sub>, and every previous value of n days before, R<sub>t-n</sub>.
