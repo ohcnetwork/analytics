@@ -11,27 +11,28 @@ We will use the same approach outlined by Kevin in his article, which uses the p
 
 ### Modeling arrivals
 The first step is to model the 'arrival' process of infections. A popular choice for the distribution of arrivals amongst statisticians is the Poisson Distribution. Accordingly, if we let λ represent the average rate of infections per day, then the probability that we are likely to see k new cases on a day, is given by
-
-    P(k|λ) = λ<sup>k</sup> * e<sup>−λ</sup> / k!
+   
+P(k|λ) = λ<sup>k</sup> * e<sup>−λ</sup> / k!
 
 Given this setup, we can construct the probability distribution of new cases for a set of λs.
 
 ### Poisson likelihood
 Modeling the arrival process as a Poisson distribution allows us to predict the distribution of new cases in a day as a function of the arrival rate λ. However, in reality, we only observe the number of arrivals. So the key question now is how do we go from the observed number of arrivals to get a sense of the distribution of λ. Thankfully, the answer to this question is simple.
 
-    L(λ|k) = λ<sup>k</sup> * e<sup>−λ</sup>) / k!
+L(λ|k) = λ<sup>k</sup> * e<sup>−λ</sup> / k!
 
 The distribution of λ over k is called the likelihood function, and it has the same mathematical expression as the probability mass function we used earlier. We can visualize the likelihood function by fixing the number of new cases observed (k), and computing the likelihood function over a range of values of λ.
 
 ### Relating λ and Rt
 According to this paper by Bettencourt & Ribeiro, the relationship between arrival rate λ and effective reproduction rate is defined as follows:
 
-    λ = k<sub>t−1</sub> * e<sup>γ(Rt−1)</sup>
-Note that γ here is the reciprocal of the serial interval (about 4 days for COVID19), and kt−1 is the number of new cases observed in the time interval t−1.
+λ = k<sub>t−1</sub> * e<sup>γ(Rt−1)</sup>
 
-We can use this expression for λ and reformulate the likelihood function in terms of Rt.
+Note that γ here is the reciprocal of the serial interval (about 4 days for COVID19), and k<sub>t−1</sub> is the number of new cases observed in the time interval t−1.
 
-    L(R<sub>t</sub>|k) = λ<sup>k</sup> * e <sup>−λ</sup> / k!
+We can use this expression for λ and reformulate the likelihood function in terms of R<sub>t</sub>.
+
+L(R<sub>t</sub>|k) = λ<sup>k</sup> * e <sup>−λ</sup> / k!
 
 # Dataset
 For this project, we use the data from https://keralastats.coronasafe.live/histories.json page where daily counts of new COVID-19 cases are reported for every district in the state of Kerala. The data is then cleaned and wrangled in a proper dataframe containing the daily count of each district. We select Ernakulam to compute the district's effective reproduction rate of the COVID-19 pandemic, R<sub>t</sub>. Every district's R<sub>t</sub> can be computed at users' choice by modifying the vector districts in the Analytics markdown file.
