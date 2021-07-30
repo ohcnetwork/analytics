@@ -15,11 +15,11 @@ R_{eff} = R_{0} \frac{S}{N}
 
 In this  we model an epidemic and study the connection between the behaviour of R<sub>eff</sub> and the epidemic curve. We are looking at a closed fully susceptible population, into which a single infected person is introduced. 
 
-### How does R<sub>eff</sub> vary over the course of the epidemic? What do you notice about the connection between the change in R<sub>eff</sub> and the epidemic curve over time? In particular, in relation to R<sub>eff</sub>, when does the epidemic peak and start to decline?
+### How does R<sub>eff</sub> vary over the course of the epidemic? What do you notice about the connection between the change in R<sub>eff</sub> and the epidemic curve over time? 
 
-The effective reproduction number is highest when everyone is susceptible: at the beginning, R<sub>eff</sub> = R<sub>0</sub>. At this point in our example, every infected cases causes an average of 4 secondary infections. Over the course of the epidemic, R<sub>eff</sub> declines in proportion to susceptibility. 
+The effective reproduction number is highest when everyone is susceptible: at the beginning, R<sub>eff</sub> = R<sub>0</sub>.  Over the course of the epidemic, R<sub>eff</sub> declines in proportion to susceptibility. 
 
-The peak of the epidemic happens when R<sub>eff</sub> goes down to 1 (in the example here, after 50 days). As R<sub>eff</sub> decreases further below 1, the epidemic prevalence goes into decline. This is exactly what you would expect, given your understanding of the meaning of R<sub>eff</sub>: once the epidemic reaches the point where every infected case cannot cause at least one more infected case (that is, when R<sub>eff</sub> < 1), the epidemic cannot sustain itself and comes to an end.
+The peak of the epidemic happens when R<sub>eff</sub> goes down to 1. As R<sub>eff</sub> decreases further below 1, the epidemic prevalence goes into decline. 
 
 ## Algorithms used in this project
 
