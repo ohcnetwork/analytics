@@ -4,6 +4,23 @@ The effective reproduction rate of a pandemic, R<sub>0</sub>, is defined as is t
 
 Computation of Rt for COVID-19 enables understanding how effectively a local or state government handles the pandemic and gives the authority helpful information in decision to loosen and tighten measures of social restrictions. As the pandemic spreads with great acceleration, R<sub>t</sub> is much more larger than 1. On the contrary, when the pandemic slows down and dies out, Rt is smaller than 1 and approaches 0. This project focuses on computation of Rt for every state on the Kerala based on the number of new cases k reported daily by the state's Department of Health. The value of R<sub>t</sub> is related to that of a day before R<sub>t-1</sub>, and every previous value of n days before, R<sub>t-n</sub>.
 
+# Simulating the effective reproduction number R<sub>eff</sub>
+
+When we derive the expression for the basic reproduction number R<sub>0</sub> in the simple SIR model: we get an epidemic only if $\beta$/$\gamma$ > 1, i.e. if the average number of secondary cases caused by a single infected case in a totally susceptible population is greater than 1. As susceptibility declines over the course of the epidemic, the effective reproduction number R<sub>eff</sub> determines the shape of the epidemic curve as it reflects the amount of immunity in the population at any given time.
+
+In a simple homogenous SIR model, R<sub>eff</sub> is directly related to the proportion of the population that is susceptible:
+\begin{align}
+R_{eff} = R_{0} \frac{S}{N}
+\end{align}
+
+In this  we model an epidemic and study the connection between the behaviour of R<sub>eff</sub> and the epidemic curve. We are looking at a closed fully susceptible population, into which a single infected person is introduced. 
+
+### How does R<sub>eff</sub> vary over the course of the epidemic? What do you notice about the connection between the change in R<sub>eff</sub> and the epidemic curve over time? In particular, in relation to R<sub>eff</sub>, when does the epidemic peak and start to decline?
+
+The effective reproduction number is highest when everyone is susceptible: at the beginning, R<sub>eff</sub> = R<sub>0</sub>. At this point in our example, every infected cases causes an average of 4 secondary infections. Over the course of the epidemic, R<sub>eff</sub> declines in proportion to susceptibility. 
+
+The peak of the epidemic happens when R<sub>eff</sub> goes down to 1 (in the example here, after 50 days). As R<sub>eff</sub> decreases further below 1, the epidemic prevalence goes into decline. This is exactly what you would expect, given your understanding of the meaning of R<sub>eff</sub>: once the epidemic reaches the point where every infected case cannot cause at least one more infected case (that is, when R<sub>eff</sub> < 1), the epidemic cannot sustain itself and comes to an end.
+
 ## Algorithms used in this project
 
 ### Bettencourt & Ribeiro
