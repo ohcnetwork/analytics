@@ -1,5 +1,5 @@
 # File:    Rt
-# Author:  Janani Mohan
+# Author:  Janani Mohan and Nivedita Roy
 # Date:    2021-06-12
 ## Reference Code : https://github.com/calldrj/COVID19.Effective.Reproduction.Rate
 install.packages("smoother")
